@@ -1,7 +1,13 @@
 node {
     stage('build') {
-        echo "Building"
+        def exists = fileExists 'source'
+        if (!exists){
+        new File('source').mkdir()
+        }
+        dir ('source') {
         git url: 'https://github.com/irfanjunaid/webdev-pipeline.git'
+        }
+        echo "Building"
         sh "pwd"
         sh "ls -a"
     }
