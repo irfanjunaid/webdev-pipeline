@@ -1,0 +1,6 @@
+stage('build') {
+    echo "Building"
+}
+stage('Deploy') {
+    echo "Deploying"
+}
