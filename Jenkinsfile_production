@@ -1,8 +1,10 @@
-stage('build') {
-    echo "Building"
-    sh "pwd"
-    sh "ls"
-}
-stage('Deploy') {
-    echo "Deploying"
+node {
+    stage('build') {
+        echo "Building"
+        sh "pwd"
+        sh "ls"
+    }
+    stage('Deploy') {
+        echo "Deploying"
+    }
 }
