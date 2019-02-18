@@ -1,6 +1,7 @@
 node {
     stage('build') {
         echo "Building"
+        git url: 'https://github.com/irfanjunaid/webdev-pipeline.git'
         sh "pwd"
         sh "ls -a"
     }
