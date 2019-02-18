@@ -1,5 +1,6 @@
 node {
     stage('build') {
+        cleanWs()
         def exists = fileExists 'source'
         if (!exists){
         new File('source').mkdir()
@@ -9,7 +10,7 @@ node {
         }
         echo "Building"
         sh "pwd"
-        sh "ls -a"
+        sh "ls -a source"
     }
     stage('Deploy') {
         echo "Deploying"
