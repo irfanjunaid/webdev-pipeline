@@ -2,7 +2,7 @@ node {
     stage('build') {
         echo "Building"
         sh "pwd"
-        sh "ls"
+        sh "ls -a"
     }
     stage('Deploy') {
         echo "Deploying"
