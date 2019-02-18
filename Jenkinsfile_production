@@ -1,7 +1,7 @@
 stage('build') {
     echo "Building"
-    pwd
-    ls
+    sh "pwd"
+    sh "ls"
 }
 stage('Deploy') {
     echo "Deploying"
